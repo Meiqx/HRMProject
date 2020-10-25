@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>奖惩信息登记</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/me.css"/>
+	<link rel="stylesheet" href="static/css/2.2.4-semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <style type="text/css">
+    .fontLook{
+      font: 14px Lato,Arial,Helvetica,sans-serif;
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+	<div class="ui container">
+		<div class="ui inverted secondary stackable menu">
+			<h2 class="ui teal header item">人力资源管理</h2>
+			<div class="right m-item item m-mobile-hide menu">
+				<div id="manager" class="ui dropdown item">
+					<div class="text">
+						<img class="ui avatar image" src="static/images/timg.jpg">
+						管理员
+					</div>
+					<i class="dropdown icon"></i>
+					<div class="menu" id="logout">
+						<a href="#" class="item">注销</a>
+					</div>
+				</div>
+			</div>
+		
+		
+		</div>
+	</div>
+	<a href="" class="ui menu toggle black icon button m-right-top m-mobile-show">
+		<i class="sidebar icon"></i>
+
+	</a>
+</nav>
+
+<!-- 中间内容 -->
+<div class="ui container"  id="m-margin-top">
+	<div class="ui stackable grid">
+		
+		<div class="five wide column" id="list">
+			<div class="ui top attached segment">
+				<div class="ui header">人力资源管理</div>
+			</div>
+			<div class="ui attached segment">
+					
+					<div class="ui styled fluid accordion">
+					  <div class="title"><i class="dropdown icon"></i> 人员管理 </div>
+					  <div class="content">
+					    <a href="员工信息录入.html" class="ui attached button segment m-margin-top-small">人员信息录入</a>
+					    <a href="员工信息查看.html" class="ui attached button segment m-margin-top-small">人员信息查看</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 招聘管理 </div>
+					  <div class="content">
+					    <a href="应聘信息录入.html" class="ui attached button segment m-margin-top-small">应聘信息录入</a>
+					    <a href="应聘信息查看.html" class="ui attached button segment m-margin-top-small">应聘信息查看</a>
+						<a href="人才库信息.html" class="ui attached button segment m-margin-top-small">人才库信息</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 培训管理 </div>
+					  <div class="content">
+					    <a href="培训计划录入.html" class="ui attached button segment m-margin-top-small">培训计划录入</a>
+					    <a href="培训计划查看.html" class="ui attached button segment m-margin-top-small">培训计划查看</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 奖惩管理 </div>
+					  <div class="content" style="display: block;">
+					    <a href="BonusPenaltyRegister" class="ui attached button segment m-margin-top-small">奖惩信息登记</a>
+					    <a href="ListBonusPenalty" class="ui attached button segment m-margin-top-small">奖惩信息查看</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 薪金管理 </div>
+					  <div class="content">
+					    <a href="薪金数据录入.html" class="ui attached button segment m-margin-top-small">薪金数据录入</a>
+					    <a href="薪金数据列表.html" class="ui attached button segment m-margin-top-small">薪金数据列表</a>
+					  </div>
+					  
+					</div>
+					
+			</div>
+		
+		</div>
+		<!-- 业务展示页面开始 -->
+		<div class="eleven wide column">
+          <div class="ui segment">
+          
+          
+            <form id="form1" action="AddBonusPenalty" method="post" onsubmit="return check()"> <!-- AddBonusPenalty -->
+              <h4 style="  font-family: Lato,Arial,Helvetica,sans-serif;line-height: 1.2857em;font-weight: 700;">
+              奖惩信息登记
+              </h4>
+              <br>
+              <div class="row">
+                <div class="col-md-4 fontLook">姓名: 
+                  <div class="ui input m-margin-tb-tiny">
+					 <!-- <input id="findEmpForm" type="text" form="form2" name="username" style="width:140px" th:value=${username}> -->
+					 <input id="name" type="text" name="username" style="width:140px" th:value=${username}>
+				  </div>
+                  <a onclick="SerachSubmit()">
+                    <span class="glyphicon glyphicon-search" style="font-size: 20px;"></span>
+                  </a>
+                  <span style="font-size: 15px;" th:text=${isExist}></span>
+                </div>
+                <div class="col-md-3 fontLook">职位:
+                  <div class="ui input m-margin-tb-tiny">
+                    <input type="text" name="job" style="width:140px">
+                  </div>                
+                </div>
+                <div class="col-md-5 fontLook">奖惩时间:
+                  <div class="ui input m-margin-tb-tiny">
+                    <input type="date" name="occurTime" style="width:200px">
+                  </div>                  
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-7 fontLook">奖惩原因: 
+                  <div class="ui input m-margin-tb-tiny">
+                    <input type="text" name="reason" style="width:550px"></input>
+                  </div>
+                </div>
+                <div class="col-md-5 fontLook">奖惩金额:
+                  <div class="ui input m-margin-tb-tiny">
+                    <input type="number" name="price" style="width:140px">
+                  </div>                
+                </div>
+              </div>  
+              
+              <div class="row">
+                <div class="col-md-12 fontLook" style="padding:6px 0 0 15px;">奖惩详情</div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 fontLook">
+                  <div class="field">
+                    <textarea name="details" style="width: 970px;height: 168px;border-radius: .28571429rem;border: 1px solid rgba(34,36,38,.15);"></textarea>
+                  </div>                  
+                </div>
+              </div> 
+              
+              <div class="row">
+                <div class="col-md-3 fontLook">登记人: 
+                  <div class="ui input m-margin-tb-tiny">
+                 	<input type="text" name="register" style="width:140px">
+                  </div>
+                </div>
+                <div class="col-md-offset-6 col-md-2 fontLook">
+                  <div class="ui input m-margin-tb-tiny">
+                    <input type="submit" value="提交">
+                  </div>                  
+                </div>
+              </div>     
+                                 
+            </form>
+            <!-- 提交搜索姓名 -->
+            <form action="FindEmp" id="form2" method="post">
+            	<input id="findEmp" type="text" name="username" style="display: none"/>
+            	<input style="display: none" type="submit" value="Submit"/>
+            </form>            
+          </div>
+	    </div>
+		<!-- 业务展示页面结束 -->
+	</div>	
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/semantic.min.js"></script>
+<script type="text/javascript" src="./bootstrap3/jquery.min.js"></script>
+<!-- Bootstrap核心js -->
+<script type="text/javascript" src="./bootstrap3/js/bootstrap.js"></script>
+<!-- 图片占位，解决低版本IE不支持圆角的问题-->
+<script type="text/javascript" src="./bootstrap3/js/holder.js"></script>
+<!-- 引入T5和C3的js函数库，支持旧版浏览器-->
+<script type="text/javascript" src="./bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="./bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="./bootstrap3/js/respond.min.js"></script>
+<script type="text/javascript">
+	function SerachSubmit(){
+		var username = $("#name").val();
+		$("#findEmp").val(username);
+		$("#form2").submit();
+	}
+	$(".title").click(function(){
+		$(".content").css("display","none");
+		$(this).next().css("display","block");
+	});
+	$("#manager").hover(function(){
+		$("#logout").css("display","block");
+	},function(){
+	    $("#logout").css("display","none");
+	  });
+	
+	function check(){
+		var username = $("#name").val();
+		$("#findEmp").val(username);
+		
+		var array = $("input");
+		var text = $("textarea");
+		if($.trim(text.val())==null||$.trim(text.val())==""){
+			alert("请填写所有所需信息")
+			return false;
+		}
+		for(var i = 0; i < array.length; i++){
+			if($.trim(array[i].value)==null||$.trim(array[i].value)==""){
+				alert("请填写所有所需信息")
+				return false;
+			}
+		}
+		return true;
+	}
+</script>
+</html>

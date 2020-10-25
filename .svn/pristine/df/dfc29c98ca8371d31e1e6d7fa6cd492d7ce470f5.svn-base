@@ -1,0 +1,66 @@
+package cn.tedu.web;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.tedu.entity.Y_Educate;
+import cn.tedu.utils.DateUtils;
+
+/**
+ * 培训录入操作
+ * 
+ * @author JAVA
+ *
+ */
+public class Y_TrainingSchool extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//设置字符集
+		request.setCharacterEncoding("UTF-8");
+		
+		//获取参数
+		String name = request.getParameter("name");//培训名称
+		String purpose = request.getParameter("purpose");//培训目的
+		String begintime = request.getParameter("begintime");//培训开始时间
+		String endtime = request.getParameter("endtime");//培训结束时间
+		String datum = request.getParameter("datum");//培训材料
+		String teacher = request.getParameter("teacher");//培训讲师
+		String student = request.getParameter("student");//培训人员  
+		
+		System.out.println("培训名称："+name);
+		System.out.println("培训目的："+purpose);
+		System.out.println("培训开始时间："+begintime);
+		System.out.println("培训结束时间："+endtime);
+		System.out.println("培训材料："+datum);
+		System.out.println("培训讲师："+teacher);
+		System.out.println("培训人员："+student);
+		
+		//添加到实体类中
+		Date date = new Date();
+		 try {
+			Y_Educate yEducate = new Y_Educate((Integer) null, name, purpose, DateUtils.getDate(begintime), DateUtils.getDate(endtime),datum, teacher, student, date, 0, "无", "无");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}

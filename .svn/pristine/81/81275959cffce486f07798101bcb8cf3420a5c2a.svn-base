@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>培训计划录入</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/me.css"/>
+	<link rel="stylesheet" href="static/css/2.2.4-semantic.min.css">
+	<link rel="stylesheet" href="static/dropdown/dropdown.min.css">
+
+
+</head>
+<body>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+	<div class="ui container">
+		<div class="ui inverted secondary stackable menu">
+			<h2 class="ui teal header item">人力资源管理</h2>
+			<div class="right m-item item m-mobile-hide menu">
+				<div class="ui dropdown item">
+					<div class="text">
+						<img class="ui avatar image" src="static/images/timg.jpg">
+						管理员
+					</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<a href="#" class="item">注销</a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<a href="" class="ui menu toggle black icon button m-right-top m-mobile-show">
+		<i class="sidebar icon"></i>
+
+	</a>
+</nav>
+
+<!-- 中间内容 -->
+<div class="ui container"  id="m-margin-top">
+	<div class="ui stackable grid">
+
+		<div class="five wide column" id="list">
+			<div class="ui top attached segment">
+				<div class="ui header">人力资源管理</div>
+			</div>
+			<div class="ui attached segment">
+
+				<div class="ui styled fluid accordion">
+					<div class="title"><i class="dropdown icon"></i> 人员管理 </div>
+					<div class="content">
+						<a href="员工信息录入.html" class="ui attached button segment m-margin-top-small">人员信息录入</a>
+						<a href="员工信息查看.html" class="ui attached button segment m-margin-top-small">人员信息查看</a>
+					</div>
+
+					<div class="title"><i class="dropdown icon"></i> 招聘管理 </div>
+					<div class="content">
+						<a href="应聘信息录入.html" class="ui attached button segment m-margin-top-small">应聘信息录入</a>
+						<a href="应聘信息查看.html" class="ui attached button segment m-margin-top-small">应聘信息查看</a>
+						<a href="人才库信息.html" class="ui attached button segment m-margin-top-small">人才库信息</a>
+					</div>
+
+					<div class="title active"><i class="dropdown icon"></i> 培训管理 </div>
+					<div class="content active">
+						<a class="ui active attached button segment m-margin-top-small">培训计划录入</a>
+						<a href="Y_TrainingToSeeServlet" class="ui attached button segment m-margin-top-small">培训计划查看</a>
+						<a href="Y_SummaryTrainingServlet" class="ui attached button segment m-margin-top-small">培训总结</a>
+					</div>
+
+					<div class="title"><i class="dropdown icon"></i> 奖惩管理 </div>
+					<div class="content">
+						<a href="奖惩信息登记.html" class="ui attached button segment m-margin-top-small">奖惩信息登记</a>
+						<a href="奖惩信息查看.html" class="ui attached button segment m-margin-top-small">奖惩信息查看</a>
+					</div>
+
+					<div class="title"><i class="dropdown icon"></i> 薪金管理 </div>
+					<div class="content">
+						<a href="薪金数据录入.html" class="ui attached button segment m-margin-top-small">薪金数据录入</a>
+						<a href="薪金数据列表.html" class="ui attached button segment m-margin-top-small">薪金数据列表</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="eleven wide column">
+			<div class="ui segment">
+				<form action="Y_TrainingSchool" method="post" class="ui form">
+					<div class="ui center aligned container">
+						<h2 class="ui text-center">培训计划录入</h2>
+					</div>
+					<div class="ui bottm attached m-margin-tb-tiny">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+							</div>
+							<div class="right aligned column">
+								<div class="ui reset button" onclick="window.history.go(-1)">返回</div>
+							</div>
+						</div>
+					</div>
+
+					<h4>人员信息</h4>
+
+					<div class="ui container">
+						<div class="ui grid">
+
+							<div class="eight wide column">
+								<div class="m-margin-left">
+									培训名称：
+									<div class="ui input m-margin-tb-tiny ">
+										<input type="text" name="name">
+									</div><br>
+
+									培训目的：
+									<div class="ui input m-margin-tb-tiny">
+										<input type="text" name="purpose">
+									</div>
+								</div>
+								培训开始时间：
+								<div class="ui input m-margin-tb-tiny">
+									<input type="date" name="begintime">
+								</div>
+								<div class="m-margin-left-2">
+									讲师：
+									<div class="ui input m-margin-tb-tiny">
+										<div class="ui  selection dropdown m-margin-tb-tiny">
+											<input name="teacher" type="hidden">
+											<i class="dropdown icon"></i>
+											<div class="default text">讲师</div>
+											<div class="menu">
+												<div class="item" data-value="杨">Value</div>
+												<div class="item" data-value="李">Another Value</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eight wide column m-margin-tb-tiny">
+								培训结束时间：
+								<div class="ui input m-margin-tb-tiny">
+									<input type="date" name="endtime">
+								</div>
+
+								<div class="m-margin-left">
+									培训人员：
+									<div class="ui input m-margin-tb-tiny">
+										<div class="ui selection dropdown m-margin-tb-tiny">
+											<input name="student" type="hidden">
+											<i class="dropdown icon"></i>
+											<div class="default text">培训人员</div>
+											<div class="menu">
+												<div class="item" data-value="黄">Value</div>
+												<div class="item" data-value="合">Another Value</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui form m-margin-tb-tiny-1">
+							<div class="ui container">
+								<div class="field">
+									<div class="ui grid">
+										<div class="six wide column" id="pxcl-h3">
+											<h4 class="ui center aligned header">培训材料</h4>
+										</div>
+										<div class="ten wide column">
+											<textarea name="datum" class="pxcl"></textarea>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="ui bottm attached m-margin-tb-tiny">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<button type="submit" class="ui mini teal basic button">保存</button>
+							</div>
+							<div class="right aligned column">
+								<button type="reset" class="ui reset button">重置</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/semantic.min.js"></script>
+<script src="static/dropdown/dropdown.min.js"></script>
+
+<script type="text/javascript">
+    $('.ui.accordion')
+        .accordion()
+    ;
+    $('.trigger.example .accordion')
+        .accordion({
+            selector: {
+                trigger: '.title .icon'
+            }
+        })
+    ;
+    $('select.dropdown')
+        .dropdown()
+    ;
+
+
+    $('.ui.radio.checkbox')
+        .checkbox()
+    ;
+
+    $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    $('.ui.dropdown')
+        .dropdown()
+    ;
+    $('.d')
+        .dropdown({
+            values: [
+                {
+                    name: '杨',
+                    value: '杨'
+                },
+                {
+                    name     : '李',
+                    value    : '李',
+                },
+                {
+                    name     : '米',
+                    value    : '米',
+                },
+                {
+                    name     : '流',
+                    value    : '流',
+                },
+                {
+                    name     : 'UI',
+                    value    : 'UI',
+                }
+            ]
+        })
+    ;
+
+
+
+</script>
+
+</html>

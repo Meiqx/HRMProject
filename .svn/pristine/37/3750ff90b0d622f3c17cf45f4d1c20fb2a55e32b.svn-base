@@ -1,0 +1,4 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://176.148.21.155:3306/Object?useUnicode=true&characterEncoding=UTF-8
+username=root
+password=123

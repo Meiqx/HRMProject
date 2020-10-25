@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>员工信息录入</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/me.css"/>
+	<link rel="stylesheet" href="static/css/2.2.4-semantic.min.css">
+	
+</head>
+<body>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+	<div class="ui container">
+		<div class="ui inverted secondary stackable menu">
+			<h2 class="ui teal header item">人力资源管理</h2>
+			<div class="right m-item item m-mobile-hide menu">
+				<div class="ui dropdown item">
+					<div class="text">
+						<img class="ui avatar image" src="static/images/timg.jpg">
+						管理员
+					</div>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<a href="#" class="item">注销</a>
+					</div>
+				</div>
+			</div>
+		
+		
+		</div>
+	</div>
+	<a href="" class="ui menu toggle black icon button m-right-top m-mobile-show">
+		<i class="sidebar icon"></i>
+	</a>
+</nav>
+
+<!-- 中间内容 -->
+<div class="ui container"  id="m-margin-top">
+	<div class="ui stackable grid">
+		
+		<div class="five wide column" id="list">
+			<div class="ui top attached segment">
+				<div class="ui header">人力资源管理</div>
+			</div>
+			<div class="ui attached segment">
+					
+					<div class="ui styled fluid accordion">
+					  <div class="title"><i class="dropdown icon"></i> 人员管理 </div>
+					  <div class="content">
+					    <a href="员工信息录入.html" class="ui attached button segment m-margin-top-small">人员信息录入</a>
+					    <a href="员工信息查看.html" class="ui attached button segment m-margin-top-small">人员信息查看</a>
+					  </div>
+					  
+					  <div class="title active"><i class="dropdown icon"></i> 招聘管理 </div>
+					  <div class="content active">
+					    <a href="JobInputServlet" class="ui attached button segment m-margin-top-small">应聘信息录入</a>
+					    <a href="JobCheckServlet" class="ui attached button segment m-margin-top-small">应聘信息查看</a>
+						<a class="ui active attached button segment m-margin-top-small">人才库信息</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 培训管理 </div>
+					  <div class="content">
+					    <a href="培训计划录入.html" class="ui attached button segment m-margin-top-small">培训计划录入</a>
+					    <a href="培训计划查看.html" class="ui attached button segment m-margin-top-small">培训计划查看</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 奖惩管理 </div>
+					  <div class="content">
+					    <a href="奖惩信息登记.html" class="ui attached button segment m-margin-top-small">奖惩信息登记</a>
+					    <a href="奖惩信息查看.html" class="ui attached button segment m-margin-top-small">奖惩信息查看</a>
+					  </div>
+					  
+					  <div class="title"><i class="dropdown icon"></i> 薪金管理 </div>
+					  <div class="content">
+					    <a href="薪金数据录入.html" class="ui attached button segment m-margin-top-small">薪金数据录入</a>
+					    <a href="薪金数据列表.html" class="ui attached button segment m-margin-top-small">薪金数据列表</a>
+					  </div>
+					  
+					</div>
+					
+			</div>
+		
+		</div>
+		
+		<div class="eleven wide column">
+			<div class="ui segment">
+				<table class="ui celled table">
+					<thead>
+						<div class="ui center aligned container">
+						  <h2>人才信息列表</h2>
+						</div>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>职位</th>
+							<th>所学专业</th>
+							<th>工作经验</th>
+							<th>执行操作</th>
+						</tr>
+					</thead>
+					
+					<tbody th:each="l:${job}">
+						<tr>
+							<td th:text="${l.name}">杨</td>
+							<td th:text="${l.sexStr}">男</td>
+							<td th:text="${l.age}">23</td>
+							<td th:text="${l.job}">java开发工程师</td>
+							<td th:text="${l.specialty}">软件开发</td>
+							<td th:text="${l.experience}">3年</td>
+							<td>
+								<a th:href="'JobEditorServlet?id='+${l.id}" class="ui mini teal basic button">编辑</a>
+								<a th:href="'JobOutPoolServlet?id='+${l.id}" class="ui mini red basic button">移除</a>
+							</td>
+						</tr>
+					</tbody>
+					
+					<tbody th:remove="all">
+						<tr>
+							<td>杨</td>
+							<td>123</td>
+							<td>男</td>
+							<td>2019-09-25 16:22</td>
+							<td>是</td>
+							<td>超级管理</td>
+							<td>
+								<a href="#" class="ui mini teal basic button">编辑</a>
+								<a href="#" class="ui mini red basic button">删除</a>
+							</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+			</div>
+		</div>
+		
+	</div>	
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/semantic.min.js"></script>
+
+<script type="text/javascript">
+    $('.ui.accordion')
+      .accordion()
+    ;
+$('.trigger.example .accordion')
+  .accordion({
+    selector: {
+      trigger: '.title .icon'
+    }
+  })
+;
+$('select.dropdown')
+  .dropdown()
+;
+
+
+$('.ui.radio.checkbox')
+  .checkbox()
+;
+
+ $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+
+</script>
+
+</html>

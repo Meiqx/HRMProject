@@ -1,0 +1,21 @@
+package cn.tedu.web;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.thymeleaf.context.Context;
+
+import cn.tedu.utils.ThUtils;
+
+//培训录入查看
+public class Y_TrainServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+		
+		ThUtils.write("trainingSchool", response, new Context());
+	}
+}

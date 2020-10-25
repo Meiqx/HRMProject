@@ -1,0 +1,30 @@
+package cn.tedu.web;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.thymeleaf.context.Context;
+
+import cn.tedu.utils.ThUtils;
+
+/**
+ * 培训计划查看
+ * 
+ * @author JAVA
+ *
+ */
+public class Y_TrainingToSeeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+     
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+		ThUtils.write("TrainingToSee", response, new Context());
+	}
+
+
+}

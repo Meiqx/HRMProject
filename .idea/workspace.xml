@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35bf2d84-e1de-41f9-8672-327d58084401" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/LogOutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/RightFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/BonusPenaltyRegister.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/UpdateBonusPenalty.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/m2e-wtp" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/web/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/AddUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/web/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/web/JobEditorSuccessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/JobEditorSuccessServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/web/JobInputSuccessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/JobInputSuccessServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/web/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/web/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Detailed-Training-Summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Detailed-Training-Summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SummaryTraining.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SummaryTraining.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TrainingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TrainingSummary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TrainingToSee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TrainingToSee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jobCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jobCheck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jobDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jobDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jobEditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jobEditor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jobInput.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jobInput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jobTalentPool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jobTalentPool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/showUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/showUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trainingSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trainingSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trainingView-Accomplish.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trainingView-Accomplish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trainingView-Detailsl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trainingView-Detailsl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>返回</find>
+      <find>remo</find>
+    </findStrings>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="539" />
+    <option name="y" value="104" />
+    <option name="width" value="1511" />
+    <option name="height" value="801" />
+  </component>
+  <component name="ProjectId" id="1jMwG3ousDdOT36mGg0zlC5t27F" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SV\HRMproject\src\main\webapp\HR" />
+      <recent name="D:\SV\HRMproject\src\main\resources" />
+      <recent name="D:\SV" />
+      <recent name="D:\SV\HRMproject\src\main\webapp\HR\static\dropdown" />
+      <recent name="D:\SV\HRMproject\src\main\webapp\HR\static\js" />
+    </key>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\MeiQx\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="G:\u盘\HRMproject" />
+          <option name="myCopyRoot" value="G:\u盘\HRMproject" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="G:\u盘\HRMproject" />
+          <option name="myCopyRoot" value="G:\u盘\HRMproject" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35bf2d84-e1de-41f9-8672-327d58084401" name="Default" comment="" />
+      <created>1569488637277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569488637277</updated>
+      <workItem from="1569488639808" duration="8503000" />
+      <workItem from="1569553766168" duration="13212000" />
+      <workItem from="1569637144792" duration="25564000" />
+      <workItem from="1569717060215" duration="1389000" />
+      <workItem from="1603627178776" duration="452000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
